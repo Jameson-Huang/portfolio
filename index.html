@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Engineering portfolio featuring mechanical design, rapid prototyping, and integrated hardware systems." />
+    <title>Jameson Huang | Engineering Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Home">Jameson Huang<span>_</span></a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a href="#projects">Projects</a>
+        <a href="#approach">Approach</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section-wrap">
+        <p class="eyebrow">Mechanical Design · Additive Manufacturing · Rapid Prototyping</p>
+        <h1>Fabricating the future<br /><em>one component at a time.</em></h1>
+        <p class="hero-copy">I am <strong>Jameson Huang</strong>, an engineer focused on turning concepts into physical prototypes — from CAD to fabrication to testing.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">Explore projects <span aria-hidden="true">↓</span></a>
+          <a class="button button-text" href="#contact">Get in touch <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-rule" aria-hidden="true"><span>Selected work</span><span>2026</span></div>
+      </section>
+
+      <section id="projects" class="projects section-wrap" aria-labelledby="projects-heading">
+        <div class="section-intro">
+          <p class="eyebrow">01 / Selected work</p>
+          <h2 id="projects-heading">Designed to be<br />built, modified, and improved.</h2>
+        </div>
+
+        <article class="project project-featured project-aircraft">
+          <div class="project-content">
+            <div class="project-topline"><span>01</span><span>Competitive Design Team</span></div>
+            <h3>3D-Printed Aircraft<br /><em>Project Flying Carpet</em></h3>
+            <p class="project-summary">An extremely lightweight aircraft manufactured, processed, and assembled part by part for competition at University of Texas, Arlington. Going through 3 iterations and 7 total planes, all 24 plane parts are printed using a special variation of filament, LightWeight PLA. </p>
+            <ul class="tag-list" aria-label="3D Printed Aircraft focus areas">
+              <li>3D Printing</li><li>Lightweight Structures</li><li>Specialized Filaments</li>
+            </ul>
+            <button class="project-toggle" type="button" aria-expanded="false">View project scope <span>+</span></button>
+            <div class="project-detail">
+              <p> The scope of the project was to print a competition ready plane to participate in competition hosted by University of Texas, Arlington. The goal is to maintain air time for as long as possible after 8 seconds of powered flight.
+              </p>
+              <p class="note">The plane is a conventional body plane featuring a pull propeller. The final iterations of the plane resulted in the measurements of: wingspan is 3.94 ft, the aspect ratio is 8.94, and the dihedral is 3 degrees. The fuselage length is 3.12 ft and the nose length is 11.25 inches. Final weight was measured to be 580g. For the final competition iteration of the plane, the plane features two distinct printing processes. For load bearing section such as the fuselage, conventional printing methods were used. For the wings, a vase mode approach was used, reducing the weight of the wings by up to 40%. The printers used were: Bambu Lab P1S, Creailty CR-30 and Creality K2 Plus.</p>
+            </div>
+          </div>
+          <div class="aircraft-feature" aria-label="Interactive print preview of supplied aircraft parts">
+            <img class="aircraft-main-photo" src="assets/aircraft-main.png" alt="3D-printed aircraft prototype" />
+            <div class="print-sim">
+              <div class="sim-topline"><span>Live build preview</span><span id="print-status">Loading files</span></div>
+              <canvas id="print-canvas" aria-label="Animated layer-by-layer 3D preview of an aircraft STL part"></canvas>
+              <div class="sim-controls">
+                <label for="part-select">Print file</label>
+                <select id="part-select">
+                  <option value = "0"> Body Aft</option> <option value="1">Body Middle</option><option value="3">Vertical stabilizer</option>
+                </select>
+                <button id="replay-print" type="button">Replay print ↻</button>
+              </div>
+              <p>Four supplied STL parts are rendered from the actual model geometry. The middle-body 3MF is included with the project files.</p>
+              <div class="file-links"><a href="assets/aircraft-models/body-aft.stl" download>Body aft STL ↓</a><a href="assets/aircraft-models/body-middle.3mf" download>Middle body 3MF ↓</a></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project project-mantis">
+          <div class="project-content">
+            <div class="project-topline"><span>02</span><span>Wearable Mechanisms</span></div>
+            <h3>Mantis Blade<br /><em>Project Rory</em></h3>
+            <p class="project-summary">Named after a major character in the game, the mantis blades are a wearable and scale model of the mantis blades from the game Cyberpunk 2077 by CDPR. This project was entirely completed independently, from design, CAD, manufacturing, and assembly. </p>
+            <ul class="tag-list" aria-label="Mantis Blade focus areas">
+              <li>CAD</li><li>Wearables</li><li>Pneumatics</li><li>Fabrication</li>
+            </ul>
+            <button class="project-toggle" type="button" aria-expanded="false">View project scope <span>+</span></button>
+            <div class="project-detail">
+              <p>The project scope was to challenge myself in creating a mechanism entirely fictional and attempt a recreation to a wearable and functional arm-mounted cosplay design</p>
+              <p class="note">The entire blade and arm are printed in PETG. The arm mount is printed in TPU 95A to ensure that skin contact wouldn't result in any negative effects due to friction.</p>
+            </div>
+          </div>
+          <div class="mantis-gallery" aria-label="Mantis Blade design and slicer references">
+            <img class="mantis-primary" src="assets/mantis-primary.png" alt="CAD render of the Mantis Blade prototype" />
+            <div class="mantis-secondary"><img src="assets/mantis-clean.jpg" alt="Mantis Blade part in slicer software" /></div>
+            <a class="cad-source" href="assets/mantis-blade-assembly.iam" download><span>Autodesk Inventor assembly</span><strong>Mantis Blade Assembly.iam ↓</strong></a>
+          </div>
+        </article>
+
+        <article class="project project-trinity">
+          <div class="trinity-cad-hero" aria-label="CAD assembly of Project Trinity">
+            <img src="assets/trinity-cad.png" alt="CAD overview of the Project Trinity 3D printer assembly" />
+            <span class="cad-callout callout-frame">Rigid Frame</span><span class="cad-callout callout-motion">300mm^3 Build Volume</span><span class="cad-callout callout-bed">Modular and Durable System</span>
+          </div>
+          <div class="project-content">
+            <div class="project-topline"><span>03</span><span>Hardware Systems · Ongoing · 3D Printing</span></div>
+            <h3>3D Printer<br /><em>Project Trinity</em></h3>
+            <p class="project-summary">A currently ongoing project centered around creating a entirely custom 3D printer. Sourcing all parts from the metal extrusions to the hotend assembly independently. The core values of the project revolve around the trinity: Speed, Size, and Accuracy.</p>
+            <ul class="tag-list" aria-label="Project Trinity focus areas">
+              <li>Motion systems</li><li>Thermal design</li><li>Firmware</li><li>Calibration</li>
+            </ul>
+            <button class="project-toggle" type="button" aria-expanded="false">View project scope <span>+</span></button>
+            <div class="project-detail">
+              <p>The scope of the project is to create a printer that can push the limits in hardware and showcase the speeds and accelerations a printer is capable of, which future plans of expanding hardware capabilities through multiple materials and independent hotends.</p>
+              <p class="note">Featuring a BIQU Octopus V1, Goliath Hotend, Sphinx assembly, Sherpa Mini extruder, and a 300mm^3 build volume, this ambitious project is meant to challenge consumer printers at every step.</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section id="approach" class="approach">
+        <div class="section-wrap approach-grid">
+          <div><p class="eyebrow">02 / How I work</p><h2>From a sketch<br />to a system.</h2></div>
+          <ol class="process-list">
+            <li><span>01</span><div><h3>Define the Systems</h3><p>Frame the real constraints: performance, cost, manufacturability, size, and safety.</p></div></li>
+            <li><span>02</span><div><h3>Prototype, Modify, Redesign</h3><p>Use CAD and rapid fabrication to prototype, modify, and redesign failed solutions</p></div></li>
+            <li><span>03</span><div><h3>Integrate</h3><p>Integrate possible solutions into the system, blending mechanical and electrical fields</p></div></li>
+            <li><span>04</span><div><h3>Iterate and Adapt</h3><p>Document successes, possible short and long term failures, and highlight any areas of improvement.</p></div></li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="contact" class="contact section-wrap">
+        <p class="eyebrow">03 / Contact</p>
+        <h2>Open<br />to collaborate?</h2>
+        <p>I am always open to expanding my horizons in any field, from manufacturing processes to mechanical design.</p>
+        <a class="contact-link" href="mailto: jamesonzhuang@gmail.com">Jamesonzhuang@gmail.com <span>↗</span></a>
+        <div class="contact-footer"><span>© <span id="year"></span> Jameson Huang</span><span>Jamesonzhuang@gmail.com</span></div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
